@@ -1,0 +1,408 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hedgina</title>
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="icons/css/line-awesome.min.css">
+        <link rel="stylesheet" href="vendor/select-picker/css/bootstrap-select.min.css">
+        <link rel="stylesheet" href="vendor/slick/slick.css">
+        <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+            #chartdiv g[aria-label="Series"] tspan,#chartdiv polyline {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a class="navbar-brand" href="#"><img src="images/hedgina_logo.png"></a>
+                    </div>
+                    <div class="col-md-9">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbartopbar" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbartopbar">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Dashboard</a>
+                                </li>
+                                <li class="nav-item sub-item">
+                                    <a class="nav-link" href="#">DCA Strategy <i class="fa fa-chevron-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li class="nav-item"><a href="my_dca_strategies.html" class="nav-link">My Strategies</a></li>
+                                        <li class="nav-item"><a href="my_deals.html" class="nav-link">My Deals</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="my_orders.html">Orders</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="my_positions.html">Positions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link notification" href="javascript:;"><i class="las la-bell"></i><span class="count">32</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link profile" href="javascript:;"><i class="las la-user"></i></a>
+                                    <div class="myprofilebox">
+                                        <div class="profilebox">
+                                            <div class="profiletitle">
+                                                <h5>Profile</h5>
+                                                <a href="javascript:;" class="closeprofile"><i class="las la-times"></i></a>
+                                            </div>
+                                            <div class="profileimg">
+                                                <span class="imgbox">
+                                                    <img src="images/profilepic.png">
+                                                </span>
+                                                <h4>Yousuf Mansoor</h4>
+                                            </div>
+                                            <ul class="profilelist">
+                                                <li><a href="javascript:;"><i class="las la-address-book"></i>Profile Details</a></li>
+                                                <li><a href="javascript:;"><i class="las la-wallet"></i>My Exchanges</a></li>
+                                            </ul>
+                                            <div class="buttons">
+                                                <a href="javascript:;" class="borderthemebtn">Switch to Dark Mode</a>
+                                                <a href="javascript:;" class="themebtn">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="topsection">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-12 col-md-12">
+                        <h4>Hi, Yousuf</h4>
+                        <p class="lastrefreshed">03rd March 2021: 08:24 PM</p>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-6">
+                        <div class="profitbox">
+                            <h6>Equity</h6>
+                            <p>$189635</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-6">
+                        <div class="profitbox">
+                            <h6>Buying Power</h6>
+                            <p class="greentext">$2596254</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-6">
+                        <div class="profitbox">
+                            <h6>Total P&L</h6>
+                            <p class="dangertext">-$6542<sub>0.79%</sub></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-6">
+                        <div class="profitbox bordernone">
+                            <h6>P&L Today</h6>
+                            <p class="greentext">$2456 <sub>11.79%</sub></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="detailsec">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-12">
+                        <div id="chartdiv"></div>
+                    </div>
+                    <div class="col-xl-8 col-lg-6 col-md-12">
+                        <div id="chartdiv1"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+       <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+       <script src="vendor/select-picker/js/bootstrap-select.min.js"></script>
+       <script src="vendor/slick/slick.js"></script>
+       <script src="vendor/graph/core.js"></script>
+       <script src="vendor/graph/charts.js"></script>
+       <script src="vendor/graph/animated.js"></script>
+       <script src="js/script.js"></script>
+       <script>
+           $(document).ready(function(){
+                $('.filtterbox a.filttericon').click(function(){
+                    $(this).parent().toggleClass('active');
+                });
+           });
+       </script>
+       <script>
+        am4core.ready(function() {
+        
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+        
+        // Create chart instance
+        var chart = am4core.create("chartdiv", am4charts.PieChart);
+        
+        // Add data
+        chart.data = [ {
+          "country": "IBM",
+          "litres": 26
+        }, {
+          "country": "APPL",
+          "litres": 25
+        },{
+          "country": "ADM",
+          "litres": 49
+        }
+        ];
+
+        // Add and configure Series
+        var pieSeries = chart.series.push(new am4charts.PieSeries());
+        pieSeries.dataFields.value = "litres";
+        pieSeries.dataFields.category = "country";
+        pieSeries.slices.template.stroke = am4core.color("#fff");
+        pieSeries.slices.template.strokeOpacity = 1;
+        
+        // This creates initial animation
+        pieSeries.hiddenState.properties.opacity = 1;
+        pieSeries.hiddenState.properties.endAngle = -90;
+        pieSeries.hiddenState.properties.startAngle = -90;
+        
+        var colorSet = new am4core.ColorSet();
+        colorSet.list = ["#A6CEE3", "#B2DF8A", "#1F78B4"].map(function(color) {
+        return new am4core.color(color);
+        });
+        pieSeries.colors = colorSet;
+
+        chart.hiddenState.properties.radius = am4core.percent(0);
+        
+        
+        }); // end am4core.ready()
+        </script>
+        <!-- Chart code -->
+        <script>
+            // Themes begin
+       // Using default theme
+       am4core.useTheme(am4themes_animated);
+       // Themes end
+       
+       // Create chart instance
+       var chart = am4core.create("chartdiv1", am4charts.XYChart);
+       
+       //
+       
+       // Increase contrast by taking evey second color
+       chart.colors.step = 2;
+       
+       // Add data
+       chart.data = generateChartData();
+       
+       // Create axes
+       var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+       categoryAxis.dataFields.category = "date";
+       categoryAxis.renderer.minGridDistance = 50;
+       categoryAxis.fontSize = "16px";
+       categoryAxis.fontWeight = "normal";
+       
+     
+       var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+         valueAxis.fontSize = "16px";
+         valueAxis.fontWeight = "normal";
+         if(chart.yAxes.indexOf(valueAxis) != 0){
+           valueAxis.syncWithAxis = chart.yAxes.getIndex(0);
+         }
+         
+
+       // Create series
+       function createAxisAndSeries(field, name, opposite, bullet,colorsbox,axisname) {
+        
+         // reloaddata();
+         
+         var series = chart.series.push(new am4charts.LineSeries());
+         series.dataFields.valueY = field;
+         series.dataFields.categoryX = "date";
+         series.stroke = am4core.color(colorsbox);
+         series.strokeWidth = 2;
+         series.yAxis = axisname;
+         series.name = name;
+         series.tooltipText = "{name}: [bold] ${valueY}[/]";
+         series.tooltip.background.fill =  am4core.color(colorsbox);
+         series.tensionX = 0.8;
+         series.showOnInit = true;
+         
+         var interfaceColors = new am4core.InterfaceColorSet();
+         
+         switch(bullet) {
+           case "triangle":
+             var bullet = series.bullets.push(new am4charts.Bullet());
+             bullet.width = 12;
+             bullet.height = 12;
+             bullet.fill =  am4core.color("#c0504d");
+             bullet.horizontalCenter = "middle";
+             bullet.verticalCenter = "middle";
+             
+             var triangle = bullet.createChild(am4core.Triangle);
+             triangle.stroke =  am4core.color("#c0504d");
+             triangle.strokeWidth = 2;
+             triangle.direction = "top";
+             triangle.width = 12;
+             triangle.height = 12;
+             break;
+           case "rectangle":
+             var bullet = series.bullets.push(new am4charts.Bullet());
+             bullet.width = 10;
+             bullet.height = 10;
+             bullet.fill =  am4core.color("#c0504d");
+             bullet.horizontalCenter = "middle";
+             bullet.verticalCenter = "middle";
+             var rectangle = bullet.createChild(am4core.Rectangle);
+             rectangle.stroke = am4core.color("#c0504d");
+             rectangle.strokeWidth = 2;
+             rectangle.width = 10;
+             rectangle.height = 10;
+             break;
+           default:
+             var bullet = series.bullets.push(new am4charts.CircleBullet());
+             bullet.fill =  am4core.color("#1F78B4");
+             bullet.circle.stroke = am4core.color("#1F78B4");
+             bullet.circle.strokeWidth = 2;
+             break;
+         }
+         
+         axisname.renderer.line.strokeOpacity = 1;
+         axisname.renderer.line.strokeWidth = 2;
+         axisname.renderer.line.stroke = series.stroke;
+         axisname.renderer.labels.template.fill = series.stroke;
+         axisname.renderer.opposite = opposite;
+     
+     
+         var segment = series.segments.template;
+         segment.interactionsEnabled = true;
+     
+         var hoverState = segment.states.create("hover");
+         hoverState.properties.strokeWidth = 3;
+     
+         var dimmed = segment.states.create("dimmed");
+         dimmed.properties.stroke = am4core.color("#B2DF8A");
+     
+         segment.events.on("over", function(event) {
+         processOver(event.target.parent.parent.parent);
+       });
+     
+       segment.events.on("out", function(event) {
+         processOut(event.target.parent.parent.parent);
+       });
+       
+       }
+       
+       createAxisAndSeries("APPL", "APPL", false, "circle","#B2DF8A",valueAxis);
+       createAxisAndSeries("IBM", "IBM", false, "circle","#A6CEE3",valueAxis);
+       createAxisAndSeries("ADM", "ADM", false, "circle","#1F78B4",valueAxis);
+       
+       // Add legend
+       chart.legend = new am4charts.Legend();
+       
+       // Add cursor
+       chart.cursor = new am4charts.XYCursor();
+       
+       // generate some random data, quite different range
+       function generateChartData() {
+         var chartData = [];
+     
+         chartData.data =[
+           {
+               date: "17/03",
+               APPL: 50,
+               IBM: 30,
+               ADM: 5
+           },
+           {
+               date: "18/03",
+               APPL: 16,
+               IBM: 17,
+               ADM: 48
+           },
+           {
+               date: "19/03",
+               APPL: 88,
+               IBM: 42,
+               ADM: 76
+           },
+           {
+               date: "20/03",
+               APPL: 44,
+               IBM: 22,
+               ADM: 34
+           },
+           {
+               date: "21/03",
+               APPL: 5,
+               IBM: 67,
+               ADM: 24
+           },
+           {
+               date: "22/03",
+               APPL: 73,
+               IBM: 15,
+               ADM: 18
+           },
+           {
+               date: "23/03",
+               APPL: 50,
+               IBM: 30,
+               ADM: 5
+           }
+         ];
+   
+         return chartData.data;
+       }
+     /* --------------------- Hover Line Start ---------------------*/
+     
+       chart.legend.itemContainers.template.events.on("over", function(event) {
+       processOver(event.target.dataItem.dataContext);
+     })
+     
+     chart.legend.itemContainers.template.events.on("out", function(event) {
+       processOut(event.target.dataItem.dataContext);
+     })
+     
+       function processOver(hoveredSeries) {
+       hoveredSeries.toFront();
+     
+       hoveredSeries.segments.each(function(segment) {
+         segment.setState("hover");
+       })
+     
+       chart.series.each(function(series) {
+         if (series != hoveredSeries) {
+           series.segments.each(function(segment) {
+             segment.setState("dimmed");
+           })
+           series.bulletsContainer.setState("dimmed");
+         }
+       });
+     }
+     
+     chart.legend.itemContainers.template.clickable = false;
+     chart.legend.itemContainers.template.focusable = false;
+     function processOut(hoveredSeries) {
+       chart.series.each(function(series) {
+         series.segments.each(function(segment) {
+           segment.setState("default");
+         })
+         series.bulletsContainer.setState("default");
+       });
+     }
+     /* --------------------- Hover Line End ---------------------*/
+         </script>
+    </body>
+</html>
