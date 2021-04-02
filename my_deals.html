@@ -1,0 +1,485 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hedgina</title>
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="icons/css/line-awesome.min.css">
+        <link rel="stylesheet" href="vendor/select-picker/css/bootstrap-select.min.css">
+        <link rel="stylesheet" href="vendor/slick/slick.css">
+        <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+        <link rel="stylesheet" href="css/range_slider_css.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a class="navbar-brand" href="#"><img src="images/hedgina_logo.png"></a>
+                    </div>
+                    <div class="col-md-9">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbartopbar" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbartopbar">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Dashboard</a>
+                                </li>
+                                <li class="nav-item sub-item">
+                                    <a class="nav-link" href="#">DCA Strategy <i class="fa fa-chevron-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li class="nav-item"><a href="my_dca_strategies.html" class="nav-link">My Strategies</a></li>
+                                        <li class="nav-item"><a href="my_deals.html" class="nav-link">My Deals</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="my_orders.html">Orders</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="my_positions.html">Positions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link notification" href="javascript:;"><i class="las la-bell"></i><span class="count">32</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link profile" href="javascript:;"><i class="las la-user"></i></a>
+                                    <div class="myprofilebox">
+                                        <div class="profilebox">
+                                            <div class="profiletitle">
+                                                <h5>Profile</h5>
+                                                <a href="javascript:;" class="closeprofile"><i class="las la-times"></i></a>
+                                            </div>
+                                            <div class="profileimg">
+                                                <span class="imgbox">
+                                                    <img src="images/profilepic.png">
+                                                </span>
+                                                <h4>Yousuf Mansoor</h4>
+                                            </div>
+                                            <ul class="profilelist">
+                                                <li><a href="javascript:;"><i class="las la-address-book"></i>Profile Details</a></li>
+                                                <li><a href="javascript:;"><i class="las la-wallet"></i>My Exchanges</a></li>
+                                            </ul>
+                                            <div class="buttons">
+                                                <a href="javascript:;" class="borderthemebtn">Switch to Dark Mode</a>
+                                                <a href="javascript:;" class="themebtn">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="topsection">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-12 col-md-12">
+                        <h4>Overall DCA State</h4>
+                        <p class="lastrefreshed">Last Refreshed 08:24 PM</p>
+                    </div>
+                    <div class="col-xl-2 col-lg-6 col-md-12">
+                        <div class="profitbox">
+                            <h6>Today's Profit</h6>
+                            <p>$2144</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-6 col-md-12">
+                        <div class="profitbox">
+                            <h6>Total</h6>
+                            <p>$78635</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-6 col-md-12">
+                        <div class="profitbox">
+                            <h6>Active Deals</h6>
+                            <p>1</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-6 col-md-12">
+                        <div class="profitbox bordernone">
+                            <h6>Completed Profit</h6>
+                            <p>$189635</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="detailsec">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <h3 class="themetitle">Strategy Deals</h3>
+                        <h6 class="themesmalltitle">Looks like you are making Profit</h6>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="form-group searchinstrument">
+                            <input type="text" class="form-control" placeholder="Search Instrument">
+                        </div>
+                        <div class="filtterbox">
+                            <a class="filttericon" href="javascript:;"><i class="fa fa-filter"></i></a>
+                            <div class="boxfilter">
+                                <div class="form-group">
+                                    <span class="form-label">Select Strategy</span>
+                                    <select class="form-control m-input">
+                                        <option>USDT Long Bot</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <span class="form-label">Status</span>
+                                    <input type="text" class="form-control m-input" placeholder="Bought">
+                                </div>
+                                <p class="smalltext">Profit Between</p>
+                                <div class="form-group w50">
+                                    <span class="form-label">Profit Start(%)</span>
+                                    <input type="text" class="form-control m-input" value="2">
+                                </div>
+                                <div class="form-group w50">
+                                    <span class="form-label">Profit End(%)</span>
+                                    <input type="text" class="form-control m-input" value="10">
+                                </div>
+                                <a href="javascript" class="themebtn grey">Reset</a>
+                                <a href="javascript" class="themebtn float-right">Apply</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-xl-12 col-lg-12 col-md-12">
+                        <div class="table-responsive dealtable">
+                            <table class="table-newdesign blank">
+                                <thead>
+                                    <tr>
+                                        <th>Strategy</th>
+                                        <th>Instrument</th>
+                                        <th>Profit</th>
+                                        <th>Volume</th>
+                                        <th>Status</th>
+                                        <th>Safety Orders</th>
+                                        <th>Created</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="blue">USDT Long Bot</span>
+                                            TTP: 5.0, (0.2)BO: 100.0 USDT, SO: 10.0 USDT,SOS: 1.0%, OS: 1.0, SS: 1.0
+                                            <span class="tdfoot">Market: Paper trading account</span>
+                                        </td>
+                                        <td>APPL
+                                            <span class="tdfoot">Buy price: 1584.45287</span></td>
+                                        <td>
+                                            <span class="startwith">-2.33% 1547.46000000</span>
+                                            <span class="processbar"></span>
+                                            <span class="colorprocess" style="width: 51%;"></span>
+                                            <span class="colwith" style="left: calc(51% - 20%);"><strong>Buy</strong> 1584.4528700</span>
+                                            <span class="endwith">1665.35000000 TTP</span>
+                                            <span class="tdfoot wsmall">Sell price: ...</span>
+                                            <span class="tdfoot wbig">Price Condition TTP 5.00%: 1665.35</span>
+                                        </td>
+                                        <td>100.10573233 USDT 0.06318000 AAPL
+                                            <span class="tdfoot bgfoot"><a href="javascript:;" class="dangertext" data-toggle="modal" data-target="#deleteStrategy"><i class="las la-times"></i> Cancel</a></span></td>
+                                        <td>Bought
+                                            <span class="tdfoot bgfoot"><a href="javascript:;" class="defaulttext" data-toggle="modal" data-target="#closeStrategy"><i class="las la-store"></i> Close at Market Price</a></span></td>
+                                        <td>Completed: 0 Active: 0 Max: 0
+                                            <span class="tdfoot bgfoot"><a href="javascript:;" class="greentext" data-toggle="modal" data-target="#addFunds"><i class="las la-money-bill-alt"></i> Add Funds</a></span></td>
+                                        <td>ID: <span class="blue">329912888</span> Start: Today 2:47:40 PM
+                                            <span class="tdfoot bgfoot"><a href="javascript:;" class="bluetext" data-toggle="modal" data-target="#addUSDT"><i class="las la-pen"></i> Edit</a>
+                                                <a href="javascript:;" class="bluetext" ><i class="las la-sync"></i></a></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> -->
+                
+                
+                    <div class="col-xl-12">
+                        <div class="table-responsive">
+                            <table class="mydealbox">
+                                <thead>
+                                    <tr>
+                                        <th>Strategy</th>
+                                        <th>Instrument</th>
+                                        <th>Profit</th>
+                                        <th>Volume</th>
+                                        <th>Status</th>
+                                        <th>Safety Orders</th>
+                                        <th>Created</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="topatbbox">
+                                                <span class="blue">USDT Long Bot</span>
+                                                <span class="black">TTP: 5.0, (0.2)BO: 100.0 USDT, SO: 10.0 USDT,SOS: 1.0%, OS: 1.0, SS: 1.0</span>
+                                            </div>
+                                            <div class="bottomtbbox">
+                                                <span class="first">Market: Paper trading account</span>
+                                                <span class="last">Buy price: 1584.45287</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="topatbbox">
+                                                <span class="black">APPL</span>
+                                            </div>
+                                            <div class="bottomtbbox">
+                                                <span class="oneonly">Sell price: ...</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="topatbbox">
+                                                <span class="startwith">-2.33% 1547.46000000</span>
+                                                <span class="processbar"></span>
+                                                <span class="colorprocess" style="width: 51%;"></span>
+                                                <span class="colwith" style="left: calc(51% - 20%);"><strong>Buy</strong> 1584.4528700</span>
+                                                <span class="endwith">1665.35000000 TTP</span>
+                                            </div>
+                                            <div class="bottomtbbox">
+                                                <span class="oneonly">Price Condition TTP 5.00%: 1665.35</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="topatbbox">
+                                                <span class="black">100.10573233 USDT 0.06318000 AAPL</span>
+                                            </div>
+                                            <div class="bottomtbbox">
+                                                <span class="oneonly"><a href="javascript:;" class="defaulttext" data-toggle="modal" data-target="#closeStrategy"><i class="las la-store"></i> Close at Market Price</a></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="topatbbox">
+                                                <span class="black">Bought</span>
+                                            </div>
+                                            <div class="bottomtbbox">
+                                                <span class="oneonly"><a href="javascript:;" class="dangertext" data-toggle="modal" data-target="#deleteStrategy"><i class="las la-times"></i> Cancel</a></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="topatbbox">
+                                                <span class="black">Completed: 0<br> Active: 0<br> Max: 0</span>
+                                            </div>
+                                            <div class="bottomtbbox">
+                                                <span class="oneonly"><a href="javascript:;" class="greentext" data-toggle="modal" data-target="#addFunds"><i class="las la-money-bill-alt"></i> Add Funds</a></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="topatbbox">
+                                                <span class="black">ID: <span class="blue">329912888</span><br> Start: Today 2:47:40 PM</span>
+                                            </div>
+                                            <div class="bottomtbbox">
+                                                <span class="oneonly"><a href="javascript:;" class="bluetext" data-toggle="modal" data-target="#addUSDT"><i class="las la-pen"></i> Edit</a>
+                                                    <a href="javascript:;" class="bluetext" ><i class="las la-sync"></i></a></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal successpopup smallpopup" id="deleteStrategy">
+            <div class="modal-dialog">
+            <div class="modal-content">      
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <div class="titilearea">
+                        <!-- <h4>Delete Strategy?</h4>
+                        <p>Are you sure you want to delete the strategy?</p> -->
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>      
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="iconboxpopup"><i class="las la-times-circle"></i></div>
+                    <h4 class="deletetitle">Cancel Strategy Deal?</h4>
+                    <p class="deletesamalltext mb-29">Please Confirm this action! This action will:</p>
+                    <ul class="popuplist danger">
+                        <li><i class="las la-check"></i> Cancel the strategy deal</li> 
+                        <li><i class="las la-check"></i> Cancel unfilled orders </li>
+                        <li><i class="las la-check"></i> Already filled orders will be saved on your exchange account!</li>
+                    </ul>
+                    <a href="javascript:;" class="themebtn exchangebtn dangerbg w100" data-dismiss="modal">Yes Cancel it!</a>
+                    <a href="javascript:;" class="themebtn exchangebtn greybg  w100" data-dismiss="modal">No</a>
+                </div>      
+            </div>
+            </div>
+        </div>
+        <div class="modal successpopup smallpopup" id="closeStrategy">
+            <div class="modal-dialog">
+            <div class="modal-content">      
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <div class="titilearea">
+                        <!-- <h4>Delete Strategy?</h4>
+                        <p>Are you sure you want to delete the strategy?</p> -->
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>      
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="iconboxpopup blue"><i class="las la-store"></i></div>
+                    <h4 class="deletetitle">Close the deal?</h4>
+                    <p class="deletesamalltext mb-29">Are you sure you want to close the deal at Market Price?</p>
+                    <p class="deletesamalltext mb-29">Profit: <span class="danger">$-2.1183080856</span></p>
+                    <ul class="popuplist blue">
+                        <li><i class="las la-check"></i> Cancel the strategy deal</li> 
+                        <li><i class="las la-check"></i> Cancel unfilled orders </li>
+                        <li><i class="las la-check"></i> Close the current position at market price</li>
+                    </ul>
+                    <a href="javascript:;" class="themebtn exchangebtn bluebg w100" data-dismiss="modal">Confirm!</a>
+                    <a href="javascript:;" class="themebtn exchangebtn greybg  w100" data-dismiss="modal">No</a>
+                </div>      
+            </div>
+            </div>
+        </div>
+        <div class="modal successpopup w500" id="addFunds">
+            <div class="modal-dialog">
+            <div class="modal-content">      
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <div class="titilearea">
+                        <h4>Add Funds to Deal</h4>
+                        <p>Allocate funds to Existing Deal</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>      
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <span class="form-label">Volume <span class="requried">*</span></span>
+                        <input type="text" class="form-control m-input" value="991.43366651">
+                    </div>
+                    <div class="form-group w80">
+                        <div class="range-slider grad" style='--min:0; --max:200; --step:1; --value:1; --text-value:"15"; '>
+                            <input type="range" min="0" max="200" step="1" value="15" oninput="this.parentNode.style.setProperty('--value',this.value); this.parentNode.style.setProperty('--text-value', JSON.stringify((+this.value).toLocaleString()))">
+                            <output></output>
+                            <div class='range-slider__progress'></div>
+                        </div>
+                        <input type="text" class="rangeinput">
+                    </div>
+                    <div class="borderboxa">
+                        <h6>256</h6>
+                        <h4>Total Stock Quantity</h4>
+                    </div>
+                    <div class="borderboxa">
+                        <h6>$189635</h6>
+                        <h4>Available Amount</h4>
+                    </div>
+                    <a href="javascript:;" class="themebtn w100">Add funds</a>
+                </div>      
+            </div>
+            </div>
+        </div>
+        <div class="modal successpopup " id="addUSDT">
+            <div class="modal-dialog">
+            <div class="modal-content">      
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <div class="titilearea">
+                        <h4>USDT Long Bot 2907425</h4>
+                        <p>Edit strategy parameters for the deal</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>      
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="form-group">
+                                <span class="form-label">Target profit (%) <span class="requried">*</span></span>
+                                <input type="text" class="form-control m-input" value="2">
+                            </div>
+                        </div>                        
+                        <div class="col-xl-12 col-lg-12 col-md-12">
+                            <h3 class="themetitle wauto">Stop Loss</h3>
+                            <label class="switch toggleswitch">
+                                <input type="checkbox" checked="">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="col-xl-6 col-lg-12">
+                            <div class="form-group">
+                                <span class="form-label">Stop Loss (%) <span class="requried">*</span></span>
+                                <input type="text" class="form-control m-input" value="5">
+                            </div>
+                        </div>   
+                        <div class="col-xl-6 col-lg-12">
+                            <div class="form-group">
+                                <span class="form-label">Stop Loss timeout <span class="requried">*</span></span>
+                                <input type="text" class="form-control m-input" value="1">
+                            </div>
+                        </div> 
+                        <div class="col-xl-12 col-lg-12 rangslide ">
+                            <div class="form-group w80">
+                                <span class="form-label">Max active safety trades count</span>
+                                <div class="range-slider grad" style='--min:0; --max:200; --step:1; --value:1; --text-value:"15"; '>
+                                    <input type="range" min="0" max="200" step="1" value="15" oninput="this.parentNode.style.setProperty('--value',this.value); this.parentNode.style.setProperty('--text-value', JSON.stringify((+this.value).toLocaleString()))">
+                                    <output></output>
+                                    <div class='range-slider__progress'></div>
+                                </div>
+                                <input type="text" class="rangeinput">
+                            </div>
+                        </div>  
+                        <div class="col-xl-12 col-lg-12 rangslide ">
+                            <div class="form-group w80">
+                                <span class="form-label">Max safety trades count</span>
+                                <div class="range-slider grad" style='--min:0; --max:200; --step:1; --value:1; --text-value:"15"; '>
+                                    <input type="range" min="0" max="200" step="1" value="15" oninput="this.parentNode.style.setProperty('--value',this.value); this.parentNode.style.setProperty('--text-value', JSON.stringify((+this.value).toLocaleString()))">
+                                    <output></output>
+                                    <div class='range-slider__progress'></div>
+                                </div>
+                                <input type="text" class="rangeinput">
+                            </div>
+                        </div> 
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="form-group">
+                                <span class="form-label">Take profit type <span class="requried">*</span></span>
+                                <select class="form-control m-input">
+                                    <option>Total Bought Volume</option>
+                                </select>
+                            </div>
+                        </div>  
+                        <div class="col-xl-6 col-lg-6 col-md-12">
+                            <div class="form-group w80 switchgroup">
+                                <span class="form-label">Trailing</span>
+                                <label class="switch toggleswitch bigswitch">
+                                    <input type="checkbox" checked="">
+                                    <span class="slider round"></span>
+                                    <span class="lefttext">Yes</span>
+                                    <span class="righttext">No</span>
+                                </label>
+                            </div>
+                        </div> 
+                        <div class="col-xl-6 col-lg-12">
+                            <div class="form-group">
+                                <span class="form-label">Trailing Deviation <span class="requried">*</span></span>
+                                <input type="text" class="form-control m-input" value="0.2">
+                            </div>
+                        </div> 
+                    </div>
+                    <a href="javascript:;" class="themebtn w100">Save Details</a>
+                </div>      
+            </div>
+            </div>
+        </div>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+       <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+       <script src="vendor/select-picker/js/bootstrap-select.min.js"></script>
+       <script src="vendor/slick/slick.js"></script>
+       <script src="js/script.js"></script>
+       <script>
+           $(document).ready(function(){
+                $('.filtterbox a.filttericon').click(function(){
+                    $(this).parent().toggleClass('active');
+                });
+           });
+       </script>
+    </body>
+</html>

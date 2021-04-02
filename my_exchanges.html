@@ -1,0 +1,173 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hedgina</title>
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="icons/css/line-awesome.min.css">
+        <link rel="stylesheet" href="vendor/select-picker/css/bootstrap-select.min.css">
+        <link rel="stylesheet" href="vendor/slick/slick.css">
+        <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a class="navbar-brand" href="#"><img src="images/hedgina_logo.png"></a>
+                    </div>
+                    <div class="col-md-9">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbartopbar" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbartopbar">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                                </li>
+                                <li class="nav-item sub-item">
+                                    <a class="nav-link" href="#">DCA Strategy <i class="fa fa-chevron-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li class="nav-item"><a href="my_dca_strategies.html" class="nav-link">My Strategies</a></li>
+                                        <li class="nav-item"><a href="my_deals.html" class="nav-link">My Deals</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="my_orders.html">Orders</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="my_positions.html">Positions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link notification" href="javascript:;"><i class="las la-bell"></i><span class="count">32</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link profile" href="javascript:;"><i class="las la-user"></i></a>
+                                    <div class="myprofilebox">
+                                        <div class="profilebox">
+                                            <div class="profiletitle">
+                                                <h5>Profile</h5>
+                                                <a href="javascript:;" class="closeprofile"><i class="las la-times"></i></a>
+                                            </div>
+                                            <div class="profileimg">
+                                                <span class="imgbox">
+                                                    <img src="images/profilepic.png">
+                                                </span>
+                                                <h4>Yousuf Mansoor</h4>
+                                            </div>
+                                            <ul class="profilelist">
+                                                <li><a href="javascript:;"><i class="las la-address-book"></i>Profile Details</a></li>
+                                                <li><a href="javascript:;"><i class="las la-wallet"></i>My Exchanges</a></li>
+                                            </ul>
+                                            <div class="buttons">
+                                                <a href="javascript:;" class="borderthemebtn">Switch to Dark Mode</a>
+                                                <a href="javascript:;" class="themebtn">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="detailsec">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <h3 class="themetitle">My Exchanges</h3>
+                        <h6 class="themesmalltitle">Following are your already connected exchanges</h6>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 text-right">
+                        <a href="javascript:;" class="themebtn exchangebtn" data-toggle="modal" data-target="#addExchange">Add New Exchange</a>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12">
+                        <div class="table-responsive">
+                            <table class="table-newdesign blue">
+                                <thead>
+                                    <tr>
+                                        <th>Exchange Title</th>
+                                        <th>Exchange</th>
+                                        <th>API Key</th>
+                                        <th>API Secret</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Alpaca Account 1</td>
+                                        <td>Alpaca</td>
+                                        <td>PKOHSSZ#!)CBTMPO&BTQ</td>
+                                        <td>PKOHSSZ#!)CBTMPO&BTQ</td>
+                                        <td>
+                                            <label class="switch toggleswitch">
+                                                <input type="checkbox" checked="">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </td>
+                                        <td><a href="javascript:;" class="edittext"><i class="las la-edit"></i> Edit</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal successpopup" id="addExchange">
+            <div class="modal-dialog">
+            <div class="modal-content">      
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <div class="titilearea">
+                        <h4>Add Exchange</h4>
+                        <p>Connect an exchange using an API key</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>      
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <span class="form-label">Select Exchange *</span>
+                        <select class="form-control m-input">
+                            <option>Alpaca</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <span class="form-label">Enter Your Exchange Name <span class="requried">*</span></span>
+                        <input type="text" class="form-control m-input" value="Alpaca">
+                    </div>
+                    <div class="form-group">
+                        <span class="form-label">API ID <span class="requried">*</span></span>
+                        <input type="text" class="form-control m-input" value="PKOHSSZ#!)CBTMPO&BTQ">
+                    </div>
+                    <div class="form-group">
+                        <span class="form-label">API Secret <span class="requried">*</span></span>
+                        <textarea class="form-control m-input">2504166E48DC19294B86773F798DEE7996D3973E2504166E48DC19294B867 73F798DEE7996D3973E2504166E48DC19294B86773F798DEE7996D3973E
+                        </textarea>
+                    </div>
+                    <a href="javascript:;" class="themebtn w100">Connect an Exchange</a>
+                </div>      
+            </div>
+            </div>
+        </div>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+       <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+       <script src="vendor/select-picker/js/bootstrap-select.min.js"></script>
+       <script src="vendor/slick/slick.js"></script>
+       <script src="js/script.js"></script>
+       <script>
+           $(document).ready(function(){
+                $('.filtterbox a.filttericon').click(function(){
+                    $(this).parent().toggleClass('active');
+                });
+           });
+       </script>
+    </body>
+</html>

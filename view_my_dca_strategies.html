@@ -1,0 +1,499 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hedgina</title>
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="icons/css/line-awesome.min.css">
+        <link rel="stylesheet" href="vendor/select-picker/css/bootstrap-select.min.css">
+        <link rel="stylesheet" href="vendor/slick/slick.css">
+        <link rel="stylesheet" href="vendor/slick/slick-theme.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a class="navbar-brand" href="#"><img src="images/hedgina_logo.png"></a>
+                    </div>
+                    <div class="col-md-9">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbartopbar" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbartopbar">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Dashboard</a>
+                                </li>
+                                <li class="nav-item sub-item">
+                                    <a class="nav-link" href="#">DCA Strategy <i class="fa fa-chevron-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li class="nav-item"><a href="my_dca_strategies.html" class="nav-link">My Strategies</a></li>
+                                        <li class="nav-item"><a href="my_deals.html" class="nav-link">My Deals</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="my_orders.html">Orders</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="my_positions.html">Positions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link notification" href="javascript:;"><i class="las la-bell"></i><span class="count">32</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link profile" href="javascript:;"><i class="las la-user"></i></a>
+                                    <div class="myprofilebox">
+                                        <div class="profilebox">
+                                            <div class="profiletitle">
+                                                <h5>Profile</h5>
+                                                <a href="javascript:;" class="closeprofile"><i class="las la-times"></i></a>
+                                            </div>
+                                            <div class="profileimg">
+                                                <span class="imgbox">
+                                                    <img src="images/profilepic.png">
+                                                </span>
+                                                <h4>Yousuf Mansoor</h4>
+                                            </div>
+                                            <ul class="profilelist">
+                                                <li><a href="javascript:;"><i class="las la-address-book"></i>Profile Details</a></li>
+                                                <li><a href="javascript:;"><i class="las la-wallet"></i>My Exchanges</a></li>
+                                            </ul>
+                                            <div class="buttons">
+                                                <a href="javascript:;" class="borderthemebtn">Switch to Dark Mode</a>
+                                                <a href="javascript:;" class="themebtn">Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="detailsec">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-12 col-md-12">
+                        <h3 class="themetitle">USDT Long Bot</h3>
+                        <h6 class="themesmalltitle">Following is the Information for the Strategy you have Created</h6>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-md-12 text-right">
+                        <a href="create_dca_strategy.html" class="themebtn viewbtn smallbtn"><i class="las la-pen"></i> Edit</a>
+                        <a href="javascript:;" class="themebtn viewbtn smallbtn bluebg"><i class="las la-download"></i> Deals Export to CSV</a>
+                        <a href="javascript:;" class="themebtn viewbtn smallbtn pendingbg" data-toggle="modal" data-target="#stopStrategy"><i class="las la-stop-circle"></i> Shop</a>
+                        <a href="javascript:;" class="themebtn viewbtn smallbtn dangerbg" data-toggle="modal" data-target="#deleteStrategy"><i class="las la-stop-circle"></i> Delete</a>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-md-12">
+                        <div class="boxview">
+                            <h6>Exchange</h6>
+                            <p>Paper Account 367458</p>
+                        </div>
+                        <div class="boxview">
+                            <h6>Ticker</h6>
+                            <p>APPL, ACI, ADM, HCDI, HLXA, HOPE, PZZA, PYAD</p>
+                        </div>
+                        <div class="boxview">
+                            <h6>Strategy</h6>
+                            <p>Long</p>
+                        </div>
+                        <div class="boxview">
+                            <h6>Target profit (%)</h6>
+                            <p>5.0 (total_bought_volume | Quote Currency)</p>
+                        </div>
+                        <div class="boxview">
+                            <h6>Deal start condition</h6>
+                            <p>Open new trade asap</p>
+                        </div>
+                        <div class="boxview">
+                            <h6>Base order size</h6>
+                            <p>100.0 USDT</p>
+                        </div>
+                        <div class="boxview">
+                            <h6>Safety order size</h6>
+                            <p>10.0 USDT</p>
+                        </div>
+                        <div class="boxview">
+                            <h6>Max safety trades count</h6>
+                            <p>0</p>
+                        </div>
+                        <div class="boxview">
+                            <h6>Max active safety trades count</h6>
+                            <p>1</p>
+                        </div>
+                        <div class="boxview">
+                            <h6>Price deviation to open safety orders (% from initial order)</h6>
+                            <p>1.0</p>
+                        </div>
+                        <div class="boxview">
+                            <h6>Start order type</h6>
+                            <p>Limit</p>
+                        </div>
+                        <div class="boxview">
+                            <h6>Safety order volume scale</h6>
+                            <p>1.0</p>
+                        </div>
+                        <div class="boxview">
+                            <h6>Safety order step scale</h6>
+                            <p>1.0</p>
+                        </div>
+                        <h4 class="newtitle">Stats</h4>
+                        <div class="boxview">
+                            <h6>Completed deals</h6>
+                            <p>2</p>
+                        </div>
+                        <div class="boxview">
+                            <h6>Active deals</h6>
+                            <p>2</p>
+                        </div>
+                        <div class="boxview">
+                            <h6>Max active deals</h6>
+                            <p>3</p>
+                        </div>
+                        <div class="boxview">
+                            <h6>Completed deals profit</h6>
+                            <p>+9.63 $</p>
+                        </div>
+                        <div class="boxview">
+                            <h6>Active deals reserve</h6>
+                            <p>0.36 $</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-md-12">
+                        <h5 class="graphtitle">Daily Profit Summary</h5>
+                        <div id="chartdiv"></div>
+                        
+                        <h5 class="graphtitle mt-space">Daily Profit Summary</h5>
+                        <div id="chartdiv1"></div>
+
+                    </div>
+                    <span class="spanbr"></span>
+                    <div class="col-xl-6 col-lg-12 col-md-12">
+                        <h3 class="themetitle">Active Deals</h3>
+                        <h6 class="themesmalltitle">Following are the Active Deals of Strategy</h6>
+                        <div class="table-responsive">
+                            <table class="table-smalldesign">
+                                <thead>
+                                    <tr>
+                                        <th>Ticker</th>
+                                        <th>Safety orders</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>APPL</td>
+                                        <td>0/0</td>
+                                        <td><a href="javascript:;" class="dangertext" data-toggle="modal" data-target="#cancelStrategy"><i class="las la-times"></i> Cancel</a>
+                                            <a href="javascript:;" class="defaulttext" data-toggle="modal" data-target="#closeStrategy"><i class="las la-store"></i> Close at Market Price</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-md-12">
+                        <h3 class="themetitle">Last Strategy Events</h3>
+                        <h6 class="themesmalltitle">Following are the Log for the Strategy events</h6>
+                        <div class="table-responsive">
+                            <table class="table-smalldesign">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>03/08/2021 6:50 AM</td>
+                                        <td>Trailing TakeProfit order will be placed when price reaches 1837.63 USDT. Size: 105.2226938 USDT (0.05726 ETH), the price should rise for 5.21% to start trailing</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03/08/2021 6:50 AM</td>
+                                        <td>Base order executed. Price: 1748.36662 USDT. Size: 100.11147266 USDT (0.05726 ETH)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03/08/2021 6:50 AM</td>
+                                        <td>Placing base order. Price: 1746.62 USDT Size: 100.0114612 USDT (0.05726 ETH)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03/08/2021 6:50 AM</td>
+                                        <td>Bot 2907425 Starting new deal. Pair: USDT_ETH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03/08/2021 6:50 AM</td>
+                                        <td>Deal completed. Profit: +4.79206814 USDT (4.79 $) (4.79% from total volume (5.0% before trailing)) 💰💰💰. #profit 1 day</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03/08/2021 6:50 AM</td>
+                                        <td>Placing TakeProfit trade. Price: market Size: ≈105.0889974 USDT (0.06009 ETH)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03/08/2021 6:50 AM</td>
+                                        <td>Trailing Take Profit Activated, current profit is 5.05%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03/08/2021 6:50 AM</td>
+                                        <td>Trailing TakeProfit order will be placed when price reaches 1751.05 USDT. Size: 105.2205945 USDT (0.06009 ETH), the price should rise for 5.21% to start trailing</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03/08/2021 6:50 AM</td>
+                                        <td>Deal completed. Profit: +4.83860429 USDT (4.84 $) (4.83% from total volume (5.0% before trailing)) 💰💰💰. #profit about 12 hours</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal successpopup smallpopup" id="deleteStrategy">
+            <div class="modal-dialog">
+            <div class="modal-content">      
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <div class="titilearea">
+                        <!-- <h4>Delete Strategy?</h4>
+                        <p>Are you sure you want to delete the strategy?</p> -->
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>      
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="iconboxpopup"><i class="las la-trash-alt"></i></div>
+                    <h4 class="deletetitle">Delete Strategy?</h4>
+                    <p class="deletesamalltext">Are you sure you want to delete the strategy?</p>
+                    <a href="javascript:;" class="themebtn exchangebtn dangerbg w100" data-dismiss="modal">Yes Delete it!</a>
+                    <a href="javascript:;" class="themebtn exchangebtn greybg  w100" data-dismiss="modal">No</a>
+                </div>      
+            </div>
+            </div>
+        </div>
+        <div class="modal successpopup smallpopup" id="cancelStrategy">
+            <div class="modal-dialog">
+            <div class="modal-content">      
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <div class="titilearea">
+                        <!-- <h4>Delete Strategy?</h4>
+                        <p>Are you sure you want to delete the strategy?</p> -->
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>      
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="iconboxpopup"><i class="las la-trash-alt"></i></div>
+                    <h4 class="deletetitle">Cancel Strategy Deal?</h4>
+                    <p class="deletesamalltext mb-29">Please Confirm this action! This action will:</p>
+                    <ul class="popuplist danger">
+                        <li><i class="las la-check"></i> Cancel the strategy deal</li> 
+                        <li><i class="las la-check"></i> Cancel unfilled orders </li>
+                        <li><i class="las la-check"></i> Already filled orders will be saved on your exchange account!</li>
+                    </ul>
+                    <a href="javascript:;" class="themebtn exchangebtn dangerbg w100" data-dismiss="modal">Yes Cancel it!</a>
+                    <a href="javascript:;" class="themebtn exchangebtn greybg  w100" data-dismiss="modal">No</a>
+                </div>      
+            </div>
+            </div>
+        </div>
+        <div class="modal successpopup smallpopup" id="closeStrategy">
+            <div class="modal-dialog">
+            <div class="modal-content">      
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <div class="titilearea">
+                        <!-- <h4>Delete Strategy?</h4>
+                        <p>Are you sure you want to delete the strategy?</p> -->
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>      
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="iconboxpopup blue"><i class="las la-store"></i></div>
+                    <h4 class="deletetitle">Close the deal?</h4>
+                    <p class="deletesamalltext mb-29">Are you sure you want to close the deal at Market Price?</p>
+                    <p class="deletesamalltext mb-29">Profit: <span class="danger">$-2.1183080856</span></p>
+                    <ul class="popuplist blue">
+                        <li><i class="las la-check"></i> Cancel the strategy deal</li> 
+                        <li><i class="las la-check"></i> Cancel unfilled orders </li>
+                        <li><i class="las la-check"></i> Close the current position at market price</li>
+                    </ul>
+                    <a href="javascript:;" class="themebtn exchangebtn bluebg w100" data-dismiss="modal">Confirm!</a>
+                    <a href="javascript:;" class="themebtn exchangebtn greybg  w100" data-dismiss="modal">No</a>
+                </div>      
+            </div>
+            </div>
+        </div>
+        <div class="modal successpopup smallpopup" id="stopStrategy">
+            <div class="modal-dialog">
+            <div class="modal-content">      
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <div class="titilearea">
+                        <!-- <h4>Delete Strategy?</h4>
+                        <p>Are you sure you want to delete the strategy?</p> -->
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>      
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="iconboxpopup pendingbg"><i class="las la-stop-circle"></i></div>
+                    <h4 class="deletetitle">Stop Strategy?</h4>
+                    <p class="deletesamalltext">Are you sure you want to stop the strategy?</p>
+                    <a href="javascript:;" class="themebtn exchangebtn pendingbg w100" data-dismiss="modal">Yes Stop it!</a>
+                    <a href="javascript:;" class="themebtn exchangebtn greybg  w100" data-dismiss="modal">No</a>
+                </div>      
+            </div>
+            </div>
+        </div>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+       <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+       <script src="vendor/select-picker/js/bootstrap-select.min.js"></script>
+       <script src="vendor/slick/slick.js"></script>
+       <script src="vendor/graph/core.js"></script>
+       <script src="vendor/graph/charts.js"></script>
+       <script src="vendor/graph/animated.js"></script>
+       <script src="js/script.js"></script>
+       <script>
+           $(document).ready(function(){
+                $('.filtterbox a.filttericon').click(function(){
+                    $(this).parent().toggleClass('active');
+                });
+           });
+       </script>
+       <script>
+        am4core.ready(function() {
+        
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+        
+        
+        
+        // Create chart instance
+        var chart = am4core.create("chartdiv", am4charts.XYChart);
+        
+        // Add data
+        chart.data = [{
+          "date": "2021-03-06",
+          "price": 5
+        }, {
+          "date": "2021-03-07",
+          "price": 9
+        }, {
+          "date": "2021-03-08",
+          "price": 8
+        }, {
+          "date": "2021-03-09",
+          "price": 4
+        }, {
+          "date": "2021-03-10",
+          "price": 10
+        }];
+        
+        // Create axes
+        var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+        dateAxis.renderer.grid.template.location = 0;
+        dateAxis.renderer.minGridDistance = 50;
+        
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.logarithmic = true;
+        // valueAxis.renderer.minGridDistance = 10;
+        
+        // Create series
+        var series = chart.series.push(new am4charts.LineSeries());
+        series.dataFields.valueY = "price";
+        series.dataFields.dateX = "date";
+        series.tensionX = 0.8;
+        series.strokeWidth = 3;
+        
+        var bullet = series.bullets.push(new am4charts.CircleBullet());
+        bullet.circle.fill = am4core.color("#fff");
+        bullet.circle.strokeWidth = 3;
+        
+        // Add cursor
+        chart.cursor = new am4charts.XYCursor();
+        chart.cursor.fullWidthLineX = true;
+        chart.cursor.xAxis = dateAxis;
+        chart.cursor.lineX.strokeWidth = 0;
+        chart.cursor.lineX.fill = am4core.color("#000");
+        chart.cursor.lineX.fillOpacity = 0.1;
+        
+        // Add scrollbar
+        // chart.scrollbarX = new am4core.Scrollbar();
+        
+        // Add a guide
+        let range = valueAxis.axisRanges.create();
+        range.value = 90.4;
+        range.grid.stroke = am4core.color("#396478");
+        range.grid.strokeWidth = 1;
+        range.grid.strokeOpacity = 1;
+        range.grid.strokeDasharray = "3,3";
+        range.label.inside = true;
+        range.label.text = "Average";
+        range.label.fill = range.grid.stroke;
+        range.label.verticalCenter = "bottom";
+        
+        }); // end am4core.ready()
+        </script>
+        <script>
+            am4core.ready(function() {
+            
+            // Themes begin
+            am4core.useTheme(am4themes_animated);
+            // Themes end
+            
+            // Create chart instance
+            var chart = am4core.create("chartdiv1", am4charts.XYChart);
+            
+            // Add data
+            chart.data = [{
+              "country": "6 Mar",
+              "visits": 9
+            }, {
+              "country": "7 Mar",
+              "visits": 4
+            }, {
+              "country": "8 Mar",
+              "visits": 4
+            }, {
+              "country": "9 Mar",
+              "visits": 5
+            }];
+            
+            // Create axes
+            
+            var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+            categoryAxis.dataFields.category = "country";
+            categoryAxis.renderer.grid.template.location = 0;
+            categoryAxis.renderer.minGridDistance = 30;
+            
+            categoryAxis.renderer.labels.template.adapter.add("dy", function(dy, target) {
+              if (target.dataItem && target.dataItem.index & 2 == 2) {
+                return dy + 25;
+              }
+              return dy;
+            });
+            
+            var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+            
+            // Create series
+            var series = chart.series.push(new am4charts.ColumnSeries());
+            series.dataFields.valueY = "visits";
+            series.dataFields.categoryX = "country";
+            series.name = "Visits";
+            series.columns.template.tooltipText = "{categoryX}: [bold]{valueY}[/]";
+            series.columns.template.fillOpacity = .8;
+            
+            var columnTemplate = series.columns.template;
+            columnTemplate.strokeWidth = 2;
+            columnTemplate.strokeOpacity = 1;
+            
+            }); // end am4core.ready()
+            </script>
+    </body>
+</html>
