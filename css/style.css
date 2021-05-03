@@ -2148,10 +2148,6 @@ a.regbgclr.blockbtn {
 .avaiplanbox .reportbox {
     display: inline-block;
 }
-.avaiplanbox a.themebtn.viewbtn.smallbtn {
-    float: right;
-    top: 5px;
-}
 .paymentmethod {
     position: relative;
     display: block;
@@ -2196,4 +2192,37 @@ a.regbgclr.blockbtn {
     display: inline-block;
     vertical-align: text-bottom;
     top: -5px;
+}
+.pagesidearealeft {
+    position: relative;
+    display: inline-block;
+    width: 384px;
+    padding: 0 15px;
+    vertical-align: top;
+}
+.pagesidearearight {
+    position: relative;
+    display: inline-block;
+    padding: 0 15px;
+    width: calc(100% - 384px);
+    vertical-align: top;
+}
+.pagesidearealeft a.themebtn {
+    height: 57px;
+    line-height: 42px !IMPORTANT;
+    font-size: 22px;
+}
+.avaiplanbox .boxlist {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 300px);
+    vertical-align: middle;
+}
+.pagesidearearight p {
+    font-size: 24px;
+}
+@media (max-width:767px){
+    .pagesidearealeft, .pagesidearearight {
+        width: 100%;
+    }
 }
